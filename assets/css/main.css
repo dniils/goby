@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #fff;
+  font-size: 18px;
+  color: 253041;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+.classA {
+  background-color: antiquewhite;
+  &__B {
+    background-color: #146ff8;
+  }
+}
+*/
+.header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  font-weight: 900;
+}
+.header__logo {
+  padding-left: 25px;
+}
+.header__logo a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  /*img {
+    display: block;
+
+    height: 40%;
+    align-items: center;
+  }*/
+}
+.header__logo a svg {
+  width: 90px;
+  height: 24px;
+}
+.header__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.header__navigation__left, .header__navigation__right {
+  margin: 0 25px;
+  display: flex;
+}
+.header__navigation__right .header__navigation__item:last-child a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.header__navigation__item {
+  display: flex;
+  align-items: center;
+}
+.header__navigation__item a {
+  color: #253041;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+.header__navigation__item a:hover {
+  color: #146ff8;
+}
+.header__navigation__item a:hover .cart-indicator {
+  background-color: #146ff8;
+}
+.header__navigation__item a:hover .fa-chevron-down {
+  transform: scale(1, -1);
+}
+.header__navigation__item a .fa-chevron-down {
+  padding-left: 5px;
+  font-size: 12px;
+  color: #253041;
+}
+.header__navigation__item .cart-indicator {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #253041;
+}
+.header__navigation__item .cart-indicator span {
+  margin: 0 auto;
+  font-weight: 700;
+  color: #fff;
+}
+
+.container {
+  padding-top: 58px;
+  height: 10000px;
+}
+.container .slide1 {
+  min-height: 500px;
+  height: 670px;
+  display: block;
+  background-image: url("https://www.goby.co/assets/modern-luxary-desktop-810f00643379d078f84ed90e28d96ba12742e9fb347cc966e480c75f9d896740.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.accessibility {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #146ff8;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  transition: scale 0.1s ease-in-out;
+}
+.accessibility i {
+  padding-top: 7.5px;
+  font-size: 30px;
+  color: #fff;
+}
+.accessibility:hover {
+  cursor: pointer;
+  scale: 1.1;
+}/*# sourceMappingURL=main.css.map */
