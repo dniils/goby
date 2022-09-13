@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -7,12 +8,24 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #fff;
   font-size: 18px;
-  color: 253041;
+  color: #253041;
+  /*
   -ms-overflow-style: none;
   scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  */
 }
-body::-webkit-scrollbar {
-  display: none;
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  text-align: center;
+  font-weight: 900;
+  padding: 4px 0;
 }
 
 /*
@@ -31,11 +44,12 @@ body::-webkit-scrollbar {
   position: fixed;
   background-color: #fff;
   font-weight: 900;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.8);
 }
-.header__logo {
+.header .logo {
   padding-left: 25px;
 }
-.header__logo a {
+.header .logo a {
   display: flex;
   height: 100%;
   align-items: center;
@@ -46,31 +60,31 @@ body::-webkit-scrollbar {
     align-items: center;
   }*/
 }
-.header__logo a svg {
+.header .logo a svg {
   width: 90px;
   height: 24px;
 }
-.header__navigation {
+.header .navigation {
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
-.header__navigation__left, .header__navigation__right {
+.header .navigation__left, .header .navigation__right {
   margin: 0 25px;
   display: flex;
 }
-.header__navigation__right .header__navigation__item:last-child a {
+.header .navigation__right .navigation__item:last-child a {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
-.header__navigation__item {
+.header .navigation__item {
   display: flex;
   align-items: center;
 }
-.header__navigation__item a {
+.header .navigation__item a {
   color: #253041;
   display: flex;
   height: 100%;
@@ -80,21 +94,21 @@ body::-webkit-scrollbar {
   text-decoration: none;
   transition: color 0.1s ease-in-out;
 }
-.header__navigation__item a:hover {
+.header .navigation__item a:hover {
   color: #146ff8;
 }
-.header__navigation__item a:hover .cart-indicator {
+.header .navigation__item a:hover .cart-indicator {
   background-color: #146ff8;
 }
-.header__navigation__item a:hover .fa-chevron-down {
+.header .navigation__item a:hover .fa-chevron-down {
   transform: scale(1, -1);
 }
-.header__navigation__item a .fa-chevron-down {
+.header .navigation__item a .fa-chevron-down {
   padding-left: 5px;
   font-size: 12px;
   color: #253041;
 }
-.header__navigation__item .cart-indicator {
+.header .navigation__item .cart-indicator {
   display: flex;
   margin-left: 10px;
   align-items: center;
@@ -103,7 +117,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   background-color: #253041;
 }
-.header__navigation__item .cart-indicator span {
+.header .navigation__item .cart-indicator span {
   margin: 0 auto;
   font-weight: 700;
   color: #fff;
@@ -111,9 +125,12 @@ body::-webkit-scrollbar {
 
 .container {
   padding-top: 58px;
-  height: 10000px;
 }
-.container .slide1 {
+.container .wrapper {
+  max-width: 100%;
+  height: 518px;
+}
+.container .slide-1, .container .slide-2 {
   min-height: 500px;
   height: 670px;
   display: block;
@@ -121,6 +138,63 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
+}
+.container .slide-2 {
+  height: 600px;
+  background-image: url("https://www.goby.co/assets/desktop-toothpaste-caf62cac68ddd0b1da95c03378287504996390244716e267183a9affcefe8aa8.jpg");
+}
+.container .info {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 150px 0 20px;
+}
+.container .info h2 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: -0.15rem;
+  font-weight: 900;
+}
+.container .info__button {
+  display: block;
+  width: 150px;
+  margin: 30px auto 0;
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #eb0089;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.08rem;
+}
+.container .add-info {
+  height: 152px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 300px;
+  padding-bottom: 50px;
+}
+.container .add-info__item h5 {
+  font-size: 12px;
+}
+.container .add-info__item h4 {
+  font-size: 20px;
+  letter-spacing: -0.08rem;
+}
+.container .add-info__item h3 {
+  font-size: 30px;
+  letter-spacing: -0.08rem;
+}
+.container .add-info__stars {
+  text-align: center;
+  margin-bottom: 10%;
+}
+.container .add-info__stars img {
+  width: 130px;
+  background-image: url();
 }
 
 .accessibility {
