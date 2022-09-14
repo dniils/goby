@@ -4,6 +4,17 @@
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-weight: 900;
+  padding: 4px 0;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   background-color: #fff;
@@ -16,16 +27,6 @@ body {
     display: none;
   }
   */
-}
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-  text-align: center;
-  font-weight: 900;
-  padding: 4px 0;
 }
 
 /*
@@ -130,8 +131,13 @@ body h6 {
   max-width: 100%;
   height: 518px;
 }
-.container .slide-1, .container .slide-2 {
-  min-height: 500px;
+.container .wrapper_left {
+  max-width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .module, .container .module_toothpaste {
   height: 670px;
   display: block;
   background-image: url("https://www.goby.co/assets/modern-luxary-desktop-810f00643379d078f84ed90e28d96ba12742e9fb347cc966e480c75f9d896740.jpg");
@@ -139,14 +145,18 @@ body h6 {
   background-size: cover;
   background-position: bottom center;
 }
-.container .slide-2 {
+.container .module_toothpaste {
   height: 600px;
   background-image: url("https://www.goby.co/assets/desktop-toothpaste-caf62cac68ddd0b1da95c03378287504996390244716e267183a9affcefe8aa8.jpg");
+}
+.container .module_toothpaste .info {
+  padding: 0;
 }
 .container .info {
   max-width: 440px;
   margin: 0 auto;
-  padding: 150px 0 20px;
+  padding: 150px 0 0;
+  text-align: center;
 }
 .container .info h2 {
   text-align: center;
@@ -154,7 +164,7 @@ body h6 {
   letter-spacing: -0.15rem;
   font-weight: 900;
 }
-.container .info__button {
+.container .info .button {
   display: block;
   width: 150px;
   margin: 30px auto 0;
@@ -168,14 +178,22 @@ body h6 {
   font-size: 13px;
   letter-spacing: 0.08rem;
 }
+.container .info .button_white {
+  background-color: #fff;
+  color: #253041;
+}
 .container .add-info {
   height: 152px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-end;
-  margin: 0 300px;
+  margin: 0 auto;
   padding-bottom: 50px;
+  width: 1000px;
+}
+.container .add-info__item {
+  width: 100%;
 }
 .container .add-info__item h5 {
   font-size: 12px;
