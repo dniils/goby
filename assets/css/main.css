@@ -47,6 +47,9 @@ body {
   font-weight: 900;
   border-bottom: 1px solid rgba(204, 204, 204, 0.8);
 }
+.header__className {
+  color: #eb0089;
+}
 .header .logo {
   padding-left: 25px;
 }
@@ -125,19 +128,23 @@ body {
 }
 
 .container {
+  width: 100%;
   padding-top: 58px;
 }
-.container .wrapper {
+
+.wrapper {
   max-width: 100%;
   height: 518px;
 }
-.container .wrapper_left {
+.wrapper_left {
   max-width: 70%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.container .module, .container .module_toothpaste {
+
+.module, .module_toothpaste {
+  width: 100%;
   height: 670px;
   display: block;
   background-image: url("https://www.goby.co/assets/modern-luxary-desktop-810f00643379d078f84ed90e28d96ba12742e9fb347cc966e480c75f9d896740.jpg");
@@ -145,26 +152,27 @@ body {
   background-size: cover;
   background-position: bottom center;
 }
-.container .module_toothpaste {
+.module_toothpaste {
   height: 600px;
   background-image: url("https://www.goby.co/assets/desktop-toothpaste-caf62cac68ddd0b1da95c03378287504996390244716e267183a9affcefe8aa8.jpg");
 }
-.container .module_toothpaste .info {
+.module_toothpaste .info {
   padding: 0;
 }
-.container .info {
+
+.info {
   max-width: 440px;
   margin: 0 auto;
   padding: 150px 0 0;
   text-align: center;
 }
-.container .info h2 {
+.info h2 {
   text-align: center;
   font-size: 40px;
   letter-spacing: -0.15rem;
   font-weight: 900;
 }
-.container .info .button {
+.info .button {
   display: block;
   width: 150px;
   margin: 30px auto 0;
@@ -177,12 +185,21 @@ body {
   font-weight: 900;
   font-size: 13px;
   letter-spacing: 0.08rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
-.container .info .button_white {
+.info .button:hover {
+  background-color: #bc006e;
+}
+.info .button_white {
   background-color: #fff;
   color: #253041;
 }
-.container .add-info {
+.info .button_white:hover {
+  color: #fff;
+  background-color: #253041;
+}
+
+.add-info {
   height: 152px;
   display: flex;
   justify-content: space-between;
@@ -192,27 +209,79 @@ body {
   padding-bottom: 50px;
   width: 1000px;
 }
-.container .add-info__item {
+.add-info__item {
   width: 100%;
 }
-.container .add-info__item h5 {
+.add-info__item h5 {
   font-size: 12px;
 }
-.container .add-info__item h4 {
+.add-info__item h4 {
   font-size: 20px;
   letter-spacing: -0.08rem;
 }
-.container .add-info__item h3 {
+.add-info__item h3 {
   font-size: 30px;
   letter-spacing: -0.08rem;
 }
-.container .add-info__stars {
+.add-info__stars {
   text-align: center;
   margin-bottom: 10%;
 }
-.container .add-info__stars img {
+.add-info__stars img {
   width: 130px;
   background-image: url();
+}
+
+.ada {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+.ada__img {
+  display: block;
+  width: 80px;
+  margin: 0 auto;
+}
+.ada__text {
+  padding: 15px 0;
+}
+.ada__add-info {
+  padding-bottom: 20px;
+}
+.ada__info-box a {
+  text-decoration: none;
+}
+.ada .hidden {
+  display: none;
+}
+.ada__learn-more {
+  width: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.ada__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  background-color: #ededed;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.ada__button-text {
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.shop {
+  background-color: #f7f7f7;
 }
 
 .accessibility {
@@ -234,4 +303,10 @@ body {
 .accessibility:hover {
   cursor: pointer;
   scale: 1.1;
+}
+
+.just-some-space-below {
+  width: 100%;
+  height: 1000px;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

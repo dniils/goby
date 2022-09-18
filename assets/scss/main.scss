@@ -22,6 +22,10 @@
 
   border-bottom: 1px solid #cccc;
 
+  &__className {
+    color: #eb0089;
+  }
+
   .logo {
     padding-left: 25px;
     a {
@@ -123,113 +127,189 @@
 }
 
 .container {
+  width: 100%;
   padding-top: 58px;
+}
 
-  .wrapper {
-    max-width: 100%;
-    height: 518px;
+.wrapper {
+  max-width: 100%;
+  height: 518px;
 
-    &_left {
-      max-width: 70%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      // background-color: red;}
+  &_left {
+    max-width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    // background-color: red;}
+  }
+}
+.module {
+  width: 100%;
+  height: 670px;
+
+  display: block;
+  background-image: url("https://www.goby.co/assets/modern-luxary-desktop-810f00643379d078f84ed90e28d96ba12742e9fb347cc966e480c75f9d896740.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  &_toothpaste {
+    @extend .module;
+    height: 600px;
+    background-image: url("https://www.goby.co/assets/desktop-toothpaste-caf62cac68ddd0b1da95c03378287504996390244716e267183a9affcefe8aa8.jpg");
+
+    .info {
+      padding: 0;
     }
   }
-  .module {
-    height: 670px;
+}
 
-    display: block;
-    background-image: url("https://www.goby.co/assets/modern-luxary-desktop-810f00643379d078f84ed90e28d96ba12742e9fb347cc966e480c75f9d896740.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
+.info {
+  max-width: 440px;
+  // height: 300px;
+  margin: 0 auto;
+  padding: 150px 0 0;
+  text-align: center;
 
-    &_toothpaste {
-      @extend .module;
-      height: 600px;
-      background-image: url("https://www.goby.co/assets/desktop-toothpaste-caf62cac68ddd0b1da95c03378287504996390244716e267183a9affcefe8aa8.jpg");
-
-      .info {
-        padding: 0;
-      }
-    }
-  }
-
-  .info {
-    max-width: 440px;
-    // height: 300px;
-    margin: 0 auto;
-    padding: 150px 0 0;
+  h2 {
     text-align: center;
+    font-size: 40px;
+    letter-spacing: -0.15rem;
+    font-weight: 900;
+  }
+  .button {
+    display: block;
+    width: 150px;
 
-    h2 {
-      text-align: center;
-      font-size: 40px;
-      letter-spacing: -0.15rem;
-      font-weight: 900;
+    margin: 30px auto 0;
+    padding: 20px 10px;
+
+    text-align: center;
+    background-color: #eb0089;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.08rem;
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    &:hover {
+      background-color: #bc006e;
     }
-    .button {
-      display: block;
-      width: 150px;
 
-      margin: 30px auto 0;
-      padding: 20px 10px;
-
-      text-align: center;
-      background-color: #eb0089;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 0.08rem;
-    }
-    .button_white {
+    &_white {
       background-color: #fff;
       color: #253041;
+
+      &:hover {
+        color: #fff;
+        background-color: #253041;
+      }
     }
   }
+}
 
-  .add-info {
-    height: 152px;
+.add-info {
+  height: 152px;
 
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
 
-    // margin: 0 300px;
+  // margin: 0 300px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 1000px;
+
+  &__item {
+    // padding: 0 50px;
+    width: 100%;
+    h5 {
+      font-size: 12px;
+    }
+    h4 {
+      font-size: 20px;
+      letter-spacing: -0.08rem;
+    }
+    h3 {
+      font-size: 30px;
+      letter-spacing: -0.08rem;
+    }
+  }
+  &__stars {
+    text-align: center;
+    margin-bottom: 10%;
+    img {
+      width: 130px;
+      background-image: url();
+    }
+  }
+}
+
+.ada {
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+
+  &__img {
+    display: block;
+    width: 80px;
     margin: 0 auto;
-    padding-bottom: 50px;
-    width: 1000px;
+  }
 
-    &__item {
-      // padding: 0 50px;
-      width: 100%;
-      h5 {
-        font-size: 12px;
-      }
-      h4 {
-        font-size: 20px;
-        letter-spacing: -0.08rem;
-      }
-      h3 {
-        font-size: 30px;
-        letter-spacing: -0.08rem;
-      }
-    }
-    &__stars {
-      text-align: center;
-      margin-bottom: 10%;
-      img {
-        width: 130px;
-        background-image: url();
-      }
+  &__text {
+    padding: 15px 0;
+  }
+
+  &__add-info {
+    padding-bottom: 20px;
+  }
+
+  &__info-box {
+    a {
+      text-decoration: none;
     }
   }
+
+  .hidden {
+    display: none;
+  }
+  &__learn-more {
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 30px;
+    height: 30px;
+    background-color: #ededed;
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__button-text {
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.shop {
+  background-color: #f7f7f7;
 }
 
 .accessibility {
@@ -255,4 +335,10 @@
     cursor: pointer;
     scale: 1.1;
   }
+}
+
+.just-some-space-below {
+  width: 100%;
+  height: 1000px;
+  display: block;
 }
