@@ -1,3 +1,5 @@
+// find a better soluton...
+
 let btnNY = document.querySelector(".press__links .press__link");
 let btnCH = document.querySelectorAll(".press__links .press__link")[1];
 let btnBI = document.querySelectorAll(".press__links .press__link")[2];
