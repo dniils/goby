@@ -1,43 +1,27 @@
-// find a better soluton...
+const tabLinks = document.querySelectorAll(".press__link");
+const tabQuotes = document.querySelectorAll(".press__quote");
 
-let btnNY = document.querySelector(".press__links .press__link");
-let btnCH = document.querySelectorAll(".press__links .press__link")[1];
-let btnBI = document.querySelectorAll(".press__links .press__link")[2];
+tabLinks.forEach(function (el) {
+  el.addEventListener("click", openTabs);
+});
 
-let contentNY = document.querySelector(".press__quotes .press__quote");
-let contentCH = document.querySelectorAll(".press__quotes .press__quote")[1];
-let contentBI = document.querySelectorAll(".press__quotes .press__quote")[2];
+function openTabs(el) {
+  const linkTarget = el.currentTarget;
+  const company = linkTarget.dataset.company;
 
-let nyFunction = function () {
-  contentNY.className = "press__quote active";
-  contentCH.className = "press__quote";
-  contentBI.className = "press__quote";
+  // Remove class .acvite for all links
+  tabLinks.forEach(function (el) {
+    el.classList.remove("active");
+  });
 
-  btnNY.className = "press__link active";
-  btnCH.className = "press__link";
-  btnBI.className = "press__link";
-};
+  // Remove class .acvite for all quotes
+  tabQuotes.forEach(function (el) {
+    el.classList.remove("active");
+  });
 
-let chFunction = function () {
-  contentNY.className = "press__quote";
-  contentCH.className = "press__quote active";
-  contentBI.className = "press__quote";
+  // Add class .active to the targeted link
+  linkTarget.classList.add("active");
 
-  btnNY.className = "press__link";
-  btnCH.className = "press__link active";
-  btnBI.className = "press__link";
-};
-
-let biFunction = function () {
-  contentNY.className = "press__quote";
-  contentCH.className = "press__quote";
-  contentBI.className = "press__quote active";
-
-  btnNY.className = "press__link";
-  btnCH.className = "press__link";
-  btnBI.className = "press__link active";
-};
-
-btnNY.onclick = nyFunction;
-btnCH.onclick = chFunction;
-btnBI.onclick = biFunction;
+  // Add class .active to element with the same id as the link's data-attribute
+  document.getElementById(company).classList.add("active");
+}
