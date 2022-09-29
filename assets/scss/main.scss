@@ -163,9 +163,6 @@
   width: 100%;
   height: 100%;
 
-  &_press {
-    height: 400px;
-  }
   &_shop {
     background-color: #f7f7f7;
     padding-bottom: 80px;
@@ -187,6 +184,24 @@
 
     .info {
       padding: 0;
+    }
+  }
+
+  &_press {
+    height: 400px;
+  }
+
+  &_treat {
+    height: 100%;
+    background-color: #4c80fa;
+
+    h3 {
+      color: #fff;
+    }
+
+    .info {
+      padding: 60px 0 60px;
+      max-width: 600px;
     }
   }
 }
@@ -467,13 +482,11 @@
     margin-top: 50px;
 
     .active {
-      // display: block;
       opacity: 1;
     }
   }
 
   &__quote {
-    // display: none;
     position: absolute;
     text-align: center;
     opacity: 0;
@@ -483,13 +496,12 @@
     width: 100%;
     padding: 0 33%;
     margin: 0 auto;
-
-    transition: opacity 0.25s ease-in-out;
   }
 }
 .img-business-insider {
   height: 30px;
 }
+
 .accessibility {
   width: 45px;
   height: 45px;
