@@ -28,6 +28,12 @@
       rel="shortcut icon"
       type="image/png"
     />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- offer appears in t seconds after page load. it should be above the header 
@@ -335,11 +341,47 @@
       </div>
     </div>
 
-    <!-- slider with auto scroll -->
+    <!-- reviews section -->
     <div class="module_reviews">
       <div class="reviews">
         <h3>THE REVIEWS ARE IN</h3>
-        <div>Section with reviews slider here.</div>
+
+        <!-- Slider main container -->
+        <div class="reviews-slider swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              "I went from a Sonicare (of 10+ years) to the Goby and couldn't be
+              happier. I feel like I just left the dentist chair after having my
+              6 month check up and cleaning."
+              <h5>JAMES P., CLIFTON, NJ</h5>
+            </div>
+            <div class="swiper-slide">
+              “Goby is the without equal, it leaves your teeth flawless, and the
+              all black design is... if James Bond had a toothbrush, he would
+              have a Goby, and a license to kill plaque.”
+              <h5>HUNTER B., WESTBROOK, ME</h5>
+            </div>
+            <div class="swiper-slide">
+              “Such a great toothbrush, keeps my mouth clean for a long time!
+              Love using it twice a day and the battery life is great too!”
+              <h5>CHARLES S., CLAYTON, NC</h5>
+            </div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+        <a href="#" class="button button_white button_border button_wide">
+          READ MORE REVIEWS
+        </a>
       </div>
     </div>
 
@@ -397,7 +439,7 @@
     <div class="module_treat">
       <div class="info">
         <h3>TREAT YOUR MOUTH TO A BETTER TOOTHBRUSH</h3>
-        <a href="#" class="button button_white">SHOP NOW</a>
+        <a href="#" class="button button_white">GET YOUR GOBY</a>
       </div>
     </div>
 
@@ -410,5 +452,7 @@
 
     <script src="./assets/js/add-info.js"></script>
     <script src="./assets/js/press-reviews.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper-slider.js"></script>
   </body>
 </html>

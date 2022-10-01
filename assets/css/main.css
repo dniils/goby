@@ -183,8 +183,14 @@ body {
   color: #fff;
 }
 .module_treat .info {
-  padding: 60px 0 60px;
+  padding: 80px 0;
   max-width: 600px;
+}
+.module_reviews {
+  background-size: contain;
+  background-origin: content-box;
+  flex-direction: row;
+  background-color: #f7f7f7;
 }
 
 .info {
@@ -203,7 +209,8 @@ body {
 .info__text {
   padding-top: 14px;
 }
-.info .button {
+
+.button {
   display: block;
   width: 150px;
   margin: 30px auto 0;
@@ -218,19 +225,22 @@ body {
   letter-spacing: 0.08rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
-.info .button:hover {
+.button:hover {
   background-color: #bc006e;
 }
-.info .button_white {
+.button_white {
   background-color: #fff;
   color: #253041;
 }
-.info .button_white:hover {
+.button_white:hover {
   color: #fff;
   background-color: #253041;
 }
-.info .button_border {
+.button_border {
   border: 2px solid #253041;
+}
+.button_wide {
+  width: 250px;
 }
 
 .add-info {
@@ -257,7 +267,7 @@ body {
 }
 .add-info__stars {
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 10px;
 }
 .add-info__stars img {
   width: 130px;
@@ -380,7 +390,25 @@ body {
   height: 500px;
   display: block;
   text-align: center;
-  background-color: #f7f7f7;
+  background: url(https://www.goby.co/assets/testimonials/testimonials-bg-left-f2fcd7135d793c5e77ea5da09c06f70e207bbd9bbf88c298b7faf51bd48d3f38.png) no-repeat left, url(https://www.goby.co/assets/testimonials/testimonials-bg-right-d481ce9a8987b6729f4afd5f3262e1b9d5543e2e81c8bbc65af024430291b8f6.png) no-repeat right;
+  background-size: contain;
+  background-origin: content-box;
+  flex-direction: row;
+}
+.reviews h3 {
+  padding: 60px 0;
+}
+.reviews .reviews-slider {
+  width: 400px;
+}
+.reviews .swiper-slide {
+  margin-bottom: 100px;
+}
+.reviews .swiper-slide:hover {
+  cursor: pointer;
+}
+.reviews .swiper-slide h5 {
+  padding-top: 10px;
 }
 
 .press {

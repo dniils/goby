@@ -200,9 +200,15 @@
     }
 
     .info {
-      padding: 60px 0 60px;
+      padding: 80px 0;
       max-width: 600px;
     }
+  }
+  &_reviews {
+    background-size: contain;
+    background-origin: content-box;
+    flex-direction: row;
+    background-color: #f7f7f7;
   }
 }
 .info {
@@ -222,40 +228,44 @@
   &__text {
     padding-top: 14px;
   }
-  .button {
-    display: block;
-    width: 150px;
+}
 
-    margin: 30px auto 0;
-    padding: 20px 10px;
+.button {
+  display: block;
+  width: 150px;
 
-    text-align: center;
-    background-color: #eb0089;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+  margin: 30px auto 0;
+  padding: 20px 10px;
 
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 0.08rem;
+  text-align: center;
+  background-color: #eb0089;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
 
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.08rem;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  &:hover {
+    background-color: #bc006e;
+  }
+
+  &_white {
+    background-color: #fff;
+    color: #253041;
+
     &:hover {
-      background-color: #bc006e;
+      color: #fff;
+      background-color: #253041;
     }
-
-    &_white {
-      background-color: #fff;
-      color: #253041;
-
-      &:hover {
-        color: #fff;
-        background-color: #253041;
-      }
-    }
-    &_border {
-      border: 2px solid #253041;
-    }
+  }
+  &_border {
+    border: 2px solid #253041;
+  }
+  &_wide {
+    width: 250px;
   }
 }
 
@@ -287,7 +297,7 @@
   }
   &__stars {
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 10px;
     img {
       width: 130px;
       background-image: url();
@@ -428,7 +438,32 @@
   height: 500px;
   display: block;
   text-align: center;
-  background-color: #f7f7f7;
+
+  background: url(https://www.goby.co/assets/testimonials/testimonials-bg-left-f2fcd7135d793c5e77ea5da09c06f70e207bbd9bbf88c298b7faf51bd48d3f38.png)
+      no-repeat left,
+    url(https://www.goby.co/assets/testimonials/testimonials-bg-right-d481ce9a8987b6729f4afd5f3262e1b9d5543e2e81c8bbc65af024430291b8f6.png)
+      no-repeat right;
+  background-size: contain;
+  background-origin: content-box;
+  flex-direction: row;
+
+  h3 {
+    padding: 60px 0;
+  }
+  .reviews-slider {
+    width: 400px;
+  }
+
+  .swiper-slide {
+    &:hover {
+      cursor: pointer;
+    }
+
+    h5 {
+      padding-top: 10px;
+    }
+    margin-bottom: 100px;
+  }
 }
 .press {
   width: 60%;
