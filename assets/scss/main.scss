@@ -155,7 +155,6 @@
     height: 100%;
     display: flex;
     align-items: center;
-    // background-color: red;}
   }
 }
 
@@ -267,6 +266,14 @@
   }
   &_wide {
     width: 250px;
+  }
+  &_input {
+    background-color: #146ff8;
+    margin: 0;
+
+    &:hover {
+      background-color: #3d66c8;
+    }
   }
 }
 
@@ -614,6 +621,120 @@
   height: 30px;
 }
 
+// Footer
+.footer {
+  display: grid;
+  grid-template-areas:
+    "footer__logo footer__menu footer__mail-input"
+    ".... footer__info footer__socials";
+  grid-template-columns: 10% 55% 35%;
+  grid-gap: 10px 10px;
+
+  padding: 30px;
+  padding-bottom: 100px;
+
+  width: 1200px;
+  margin: 0 auto;
+
+  h4 {
+    text-align: left;
+  }
+
+  &__logo {
+    grid-area: footer__logo;
+    margin-top: 10px;
+  }
+  &__menu {
+    grid-area: footer__menu;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-right: 20%;
+    padding-bottom: 40px;
+    margin: 10px 0;
+  }
+  &__column {
+    a {
+      font-size: 12px;
+    }
+  }
+  &__mail-input {
+    grid-area: footer__mail-input;
+    margin: 10px 0;
+  }
+  &__input-group {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    //put button inside input box
+    position: relative;
+    margin: 1rem 0;
+  }
+  &__input {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    transition: all 0.25s;
+    border-radius: 3px;
+    border: 1px solid #a9acb2;
+    background: white;
+    padding: 20px;
+    outline: none;
+    line-height: 1rem;
+    color: inherit;
+  }
+  .button {
+    position: absolute;
+    bottom: 1px;
+  }
+  &__info {
+    grid-area: footer__info;
+    align-self: end;
+    font-weight: 700;
+    font-size: 0.714rem;
+    color: #93989f;
+  }
+  &__socials {
+    grid-area: footer__socials;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 0.714rem;
+    color: #93989f;
+  }
+  &__icons {
+    display: flex;
+  }
+  &__icon {
+    padding: 15px;
+    border: 1px solid #93989f;
+    border-radius: 50%;
+
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      background-color: #253041;
+      border-color: #253041;
+      .share-icon {
+        opacity: 1;
+        filter: invert(100%);
+      }
+    }
+
+    .share-icon {
+      width: 25px;
+      height: 25px;
+      opacity: 0.35;
+    }
+    margin-left: 20px;
+  }
+}
+
 .accessibility {
   width: 45px;
   height: 45px;
@@ -637,11 +758,4 @@
     cursor: pointer;
     scale: 1.1;
   }
-}
-
-.just-some-space-below {
-  width: 100%;
-  height: 1000px;
-  display: block;
-  background-color: #f7f7f7;
 }

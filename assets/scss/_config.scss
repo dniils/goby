@@ -35,3 +35,27 @@ body {
   }
   */
 }
+
+a {
+  text-decoration: none;
+  color: #253041;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+
+  // margin-block-start: 1em;
+  // margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+li {
+  line-height: 1.1;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
