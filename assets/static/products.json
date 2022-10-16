@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Monochrome",
+    "description": "Our monochrome favorites and best sellers.",
+    "image": "https://www.goby.co/assets/nav/brush-kits/rose/desktop-e8eb6a150c81a1cdfbd51c6ef6d6f15acc9a21c919355b039fe91fdb91bab79d.jpg",
+    "types": [
+      { "color": "#300", "image": "" },
+      { "color": "#300", "image": "" },
+      { "color": "#300", "image": "" }
+    ]
+  },
+  {
+    "title": "Metallic",
+    "description": "Our Metallic and Limited Edition Brush Kits.",
+    "image": "https://www.goby.co/assets/nav/brush-kits/moonstone/desktop-b894bb9d9da692ea43734cca4e4773217c9f0540ae89db5e0172b56b161abedc.jpg",
+    "types": [{ "color": "#300", "image": "" }]
+  },
+  {
+    "title": "Classic",
+    "description": "The Goby that started it all in its most essential form.",
+    "image": "https://www.goby.co/assets/nav/brush-kits/blue/desktop-bd02d3900390bed2444015540042d1349a64ae37314070a351e5ea4911ae5482.jpg",
+    "types": [
+      { "color": "#300", "image": "" },
+      { "color": "#300", "image": "" },
+      { "color": "#300", "image": "" }
+    ]
+  }
+]
